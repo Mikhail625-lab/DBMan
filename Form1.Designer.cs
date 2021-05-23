@@ -54,6 +54,8 @@ namespace DBMan
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -143,6 +145,7 @@ namespace DBMan
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(225, 23);
             this.textBox11.TabIndex = 10;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // comboBox1
             // 
@@ -276,11 +279,11 @@ namespace DBMan
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(232, 396);
+            this.button1.Location = new System.Drawing.Point(63, 338);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(225, 23);
             this.button1.TabIndex = 23;
-            this.button1.Text = "button1";
+            this.button1.Text = "conn";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -288,17 +291,37 @@ namespace DBMan
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(718, 9);
+            this.listBox1.Location = new System.Drawing.Point(292, 33);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(514, 394);
+            this.listBox1.Size = new System.Drawing.Size(225, 274);
             this.listBox1.TabIndex = 24;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(63, 277);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(225, 23);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "set default var";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox12.Location = new System.Drawing.Point(63, 309);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(454, 23);
+            this.textBox12.TabIndex = 26;
             // 
             // frmConn1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1273, 431);
+            this.ClientSize = new System.Drawing.Size(1264, 381);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
@@ -359,6 +382,8 @@ namespace DBMan
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox12;
     }
 }
 
