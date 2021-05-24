@@ -110,7 +110,21 @@ namespace DBMan
             comboBox1.Text = "MS SQL";
         }
 
-        private void ConnAutSQL()
+
+        private void ConnMySQL()
+        {
+            var host = "HostName";
+            var port = 3306;
+            var dataBase = "DatabaseName";
+            var userName = "UserName";
+            var password = "Password";
+            var connString =
+                $"Server={host};Database={dataBase};port={port}" +
+                $";User Id={userName};pasword={password}";
+            var conn = new MySqlConnection(connString);
+
+        }
+        private void ConnMSSQLAutSQL()
         {
 
 
@@ -123,7 +137,7 @@ namespace DBMan
                  "User Instance=true;" +
                  "User Id=UserName;" +
                  "Password=Secret;" +
-                 "AttachDbFilename=|DataDirectory|Database1.mdf;"
+                 "AttachDbFilename=|DataDirectory|Database1.mdf;";
             conn.Open();
 
 
@@ -131,6 +145,9 @@ namespace DBMan
 
 
         }
+
+
+
         private void ConnAutWin()
         {
             //If you use Windows authentication, use this:
@@ -140,8 +157,13 @@ namespace DBMan
                  @"Data Source=.\SQLExpress;" +
                  "User Instance=true;" +
                  "Integrated Security=true;" +
-                 "AttachDbFilename=|DataDirectory|Database1.mdf;"
+                 "AttachDbFilename=|DataDirectory|Database1.mdf;";
 conn.Open();
+
+        }
+        private void ConnTest()
+        {
+            new SqlConnection("Server=(local);Integrated Security=true");
 
         }
 
